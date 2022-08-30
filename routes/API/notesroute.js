@@ -3,12 +3,12 @@ const { createNewNote, deleteNote } = require('../notes');
 let { notesArray } = require('../../db/db.json');
 
 // api/notes
-router.get('/notes', (req, res) => {
+router.get('/api/notes', (req, res) => {
   let results = notesArray;
   res.json(results);
 });
 
-router.post('/notes', (req, res) => {
+router.post('/api/notes', (req, res) => {
 
   if(notesArray){
   req.body.id = notesArray.length.toString();
